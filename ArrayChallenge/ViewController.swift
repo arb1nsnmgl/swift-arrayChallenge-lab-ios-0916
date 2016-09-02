@@ -25,17 +25,28 @@ class ViewController: UIViewController {
         
         // After you're done implementing your method, call on it here. You can remove this example below
         
-        thisIsAnExample()
+        //thisIsAnExample()
         
     }
     
     // This is just an example - you can remove this.
-    func thisIsAnExample() {
-        print("This ist just an example, you can remvove this.")
-    }
+//    func thisIsAnExample() {
+//        print("This ist just an example, you can remvove this.")
+//    }
     
     
     // Implement your method here
-
+    func makeShoppingListWithItems( items: [String], quantityOfItems: [Int]) -> [String] {
+        if items.count == quantityOfItems.count {
+            
+            for (index, number) in quantityOfItems.enumerate() {
+                shoppingList.append("\(index + 1). \(number) \(items[index])")
+            }
+            
+        }
+        print(shoppingList)
+        return shoppingList
+        
+    }
     
 }
